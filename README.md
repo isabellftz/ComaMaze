@@ -17,7 +17,6 @@ A Julia implementation for generating, solving, and visualising mazes using grap
 * **`src/solver.jl`**: Implements the maze solver using the Right-Hand Rule.
 * **`src/visualize.jl`**: Handles terminal rendering routines and overloads `Base.show`.
 
----
 
 **Usage Example**
 
