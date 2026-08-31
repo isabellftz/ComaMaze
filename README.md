@@ -2,7 +2,6 @@
 
 A Julia implementation for generating, solving, and visualising mazes using graph theory principles.
 
----
 
 **Overview**
 
@@ -10,7 +9,6 @@ A Julia implementation for generating, solving, and visualising mazes using grap
 * **Pathfinding Solver:** Solves the generated maze using the **Right-Hand Rule** based on local wall boundaries.
 * **Terminal Visualisation:** Visualises the maze grid and the computed solution path directly in the terminal via custom `Base.show` overloads.
 
----
 
 **Project Structure**
 
