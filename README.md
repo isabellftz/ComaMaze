@@ -1,24 +1,30 @@
 # ComaMaze
 
-A Julia package for generating, visualizing, and solving random mazes as spanning trees on grid graphs.
----
-
-## Features
-
-* **Maze Generation:** Creates $M \times N$ mazes via randomized depth-first search (DFS) to build random spanning trees.
-* **Maze Solver:** Solves generated mazes using the **Right-Hand Rule** based on local wall information.
-* **Terminal Visualization:** Custom `Base.show` overloading to visualize mazes and solution paths directly in the terminal.
+A Julia implementation for generating, solving, and visualising mazes using graph theory principles.
 
 ---
 
-## Project Structure
+**Overview**
 
-```text
-ComaMaze/
-├── Project.toml
-├── Manifest.toml
-└── src/
-    ├── MazeGeneration.jl  # Main module & exports
-    ├── core.jl            # Node & Maze structs, graph logic
-    ├── solver.jl          # Right-Hand Rule maze solving algorithm
-    └── visualize.jl       # MazeViz struct & terminal rendering
+* **Maze Generation:** Creates random mazes by finding a spanning tree on a grid graph using a randomised Depth-First Search (DFS) algorithm.
+* **Pathfinding Solver:** Solves the generated maze using the **Right-Hand Rule** based on local wall boundaries.
+* **Terminal Visualisation:** Visualises the maze grid and the computed solution path directly in the terminal via custom `Base.show` overloads.
+
+---
+
+**Project Structure**
+
+* **`src/MazeGeneration.jl`**: Main module entry point and exported functions.
+* **`src/core.jl`**: Contains the `Node` and `Maze` data structures alongside basic graph constructions.
+* **`src/solver.jl`**: Implements the maze solver using the Right-Hand Rule.
+* **`src/visualize.jl`**: Handles terminal rendering routines and overloads `Base.show`.
+
+---
+
+**Usage Example**
+
+```julia
+using ComaMaze
+
+m = maze(5,5)
+solve(m)
